@@ -1,4 +1,5 @@
 from flask import Flask
+from random import choice
 
 app = Flask(__name__)
 
@@ -17,13 +18,18 @@ def index():
 
     # TODO: pick another random movie, and display it under
     # the heading "<h1>Tommorrow's Movie</h1>"
-
-    return content
+    moviea = get_random_movie()
+    contenta = "<h1>Tomorrow's Movie</h1>"
+    contenta += "<ul>"
+    contenta += "<li>" + moviea + "</li>"
+    contenta += "</ul>"
+    return content, contenta
 
 def get_random_movie():
     # TODO: make a list with at least 5 movie titles
     # TODO: randomly choose one of the movies, and return it
-    return "The Big Lebowski"
+    ReturnMovie = choice(["Saturday Night Fever", "Jurrasic Park", "Robin Hood", "Zomaar Wat", "Turks Fruit"])
+    return ReturnMovie
 
 
 app.run()
