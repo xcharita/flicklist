@@ -28,7 +28,7 @@ def index():
 def get_random_movie():
     # TODO: make a list with at least 5 movie titles
     # TODO: randomly choose one of the movies, and return it
-    ReturnMovie = choice(["Saturday Night Fever", "Jurrasic Park", "Robin Hood", "Zomaar Wat", "Turks Fruit"])
+    ReturnMovie = choice(["Saturday Night Fever", "Jurrasic Park", "Robin Hood", "James Bond", "Turks Fruit"])
     return ReturnMovie
 
 
